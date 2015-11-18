@@ -8,6 +8,6 @@
     "sourceMap": true
   },
   "files": [
-    "experiment.ts"
+    "./src/experiment.ts"
   ]
 }
