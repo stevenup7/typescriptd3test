@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "out": "./build/experiment.js",
+    "sourceMap": true
+  },
+  "files": [
+    "experiment.ts"
+  ]
+}

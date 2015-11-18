@@ -1,0 +1,18 @@
+line {
+    stroke-width: 1px;
+    stroke: #999;
+}
+path {
+    stroke-width: 1px;
+    stroke: #999;
+    fill: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+text {
+    font-size: 12px;
+    color: #999;
+}
