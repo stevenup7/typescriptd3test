@@ -1,10 +1,14 @@
 /// <reference path="./d3/d3.d.ts" />
+/// <reference path="./d3-keybuilder.ts" />
+/// <reference path="./d3-chart.ts" />
 
 var width = 2500;
 
-var canvas = d3.select('#canvas').append('svg')
-    .attr('width', width)
-    .attr('height', 500);
+var chart: Chart.D3Chart;
+
+chart = new Chart.D3Chart('Test Viz', '#canvas', width, 500);
+
+chart.setMargins({top: 20, left: 50});
 
 var data: number[] = d3.range(200);
 
@@ -19,25 +23,17 @@ data = data.map( (i: number) => {
 });
 
 var minMax: number[] = [d3.min(data),  d3.max(data)];
-
 var yScale = d3.scale.linear()
     .domain(minMax)
     .range([200, 0]);
 
-var yAxis = d3.svg.axis()
-    .scale(yScale)
-    .orient("left");
+chart.addAxis(yScale, Chart.Alignment.left);
 
-canvas.append("g")
-    .attr("class",     "axis")
-    .attr("transform", "translate(50,0)")
-    .call(yAxis);
-
-var bars = canvas.selectAll('.bar')
+var bars = chart.canvas.selectAll('.bar')
     .data(data)
 
-canvas.append('line')
-    .attr('x1', 50)
+chart.canvas.append('line')
+    .attr('x1', chart.margins.left)
     .attr('x2', width)
     .attr('y1', yScale(0))
     .attr('y2', yScale(0))
