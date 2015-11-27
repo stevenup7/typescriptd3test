@@ -8,6 +8,7 @@
     "gulp": "^3.9.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-typescript": "^2.9.2",
+    "gulp-webserver": "^0.9.1",
     "js-beautify": "^1.5.10"
   },
   "scripts": {
