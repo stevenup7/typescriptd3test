@@ -32,7 +32,7 @@ module Chart {
             this.margins = m;
         }
 
-        addAxis (scale: number, orientation: Alignment) {
+        addAxis (scale: any, orientation: Alignment) {
             var newAxis = d3.svg.axis()
                 .scale(scale)
                 .orient(alignments[orientation]);
